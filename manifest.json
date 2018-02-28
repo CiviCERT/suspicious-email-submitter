@@ -3,15 +3,13 @@
   "name": "SES",
   "version": "0.0.0",
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "scripts": ["background.js"]
   },
-  "page_action" : {
-    "default_title" : "SES",
-    "default_popup": "popup.html"
+  "browser_action" : {
+    "default_title" : "SES"
   },
   "permissions" : [
-    "tabs",
-    "declarativeContent"
+    "*://*/*",
+    "tabs"
   ]
 }
