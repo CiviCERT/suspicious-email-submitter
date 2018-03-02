@@ -6,8 +6,9 @@ $('#settings').click(function(event) {
   window.open('/options.html');
 });
 
+
 if (data) {
-  $('.data').text(data);
+  $('#data').text(data);
 
   document.forms["form"].addEventListener('submit', function(event) {
     event.preventDefault();
