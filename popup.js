@@ -1,22 +1,30 @@
-var SERVER_URL = localStorage.getItem('serverUrl');
 var data = new URL(location).searchParams.get('data');
-console.log(data);
+var status = new URL(location).searchParams.get('status');
 
 $('#settings').click(function(event) {
   event.preventDefault();
   window.open('/options.html');
 });
 
-$('.data').text(data);
+if (data) {
+  $('.data').text(data);
 
-document.forms["form"].addEventListener('submit', function(event) {
-  event.preventDefault();
-  fetch(SERVER_URL, {
-    method : 'POST',
-    body   : data,
-  }).then(function(response) {
-    console.log(response.status);
-  }).catch(function(error) {
-    console.log(error);
+  document.forms["form"].addEventListener('submit', function(event) {
+    event.preventDefault();
+    var serverUrl = localStorage.getItem('serverUrl');
+    if (typeof serverUrl !== 'string' || serverUrl.length === 0) {
+      // handle invalid server url
+    } else {
+      fetch(serverUrl, {
+        method : 'POST',
+        body   : data,
+      }).then(function(response) {
+        console.log(response.status);
+      }).catch(function(error) {
+        console.log(error);
+      });
+    }
   });
-});
+} else if (status) {
+  $('.data').text(status);
+}

@@ -25,8 +25,11 @@ if (url.host === "mail.google.com") {
 
 if (rawDownloadUrl) {
   // fetch emails
-  $.get(rawDownloadUrl, function(result) {
+  var deferred = $.get(rawDownloadUrl);
+  deferred.then(function(result) {
     // send message to popup
-    chrome.runtime.sendMessage(null, result);
+    chrome.runtime.sendMessage(null, { status: deferred.status, result: result });
+  }).catch(function(deferred) {
+    chrome.runtime.sendMessage(null, { status: deferred.status });
   });
 }
