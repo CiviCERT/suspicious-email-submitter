@@ -1,6 +1,11 @@
-var SERVER_URL = 'http://localhost:8000';
+var SERVER_URL = localStorage.getItem('serverUrl');
 var data = new URL(location).searchParams.get('data');
 console.log(data);
+
+$('#settings').click(function(event) {
+  event.preventDefault();
+  window.open('/options.html');
+});
 
 $('.data').text(data);
 

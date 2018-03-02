@@ -4,20 +4,20 @@
     <meta charset='utf-8'>
     <meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' name='viewport'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SES</title>
+    <title>SES Settings</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='/images/icon_128.png' rel='shortcut icon'>
-    <link href="/popup.css" rel="stylesheet" type="text/css" />
+    <link href="/settings.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>This email smells phishy</h1>
+    <h1>SES Settings</h1>
     <form id="form">
-      <pre class='data'></pre>
-      <input type='submit' value='Send it'>
-      <button id='settings'>Settings</button>
+      <label for='serverUrl'>Server URL</label>
+      <input type='text' id='serverUrl' class='setting' name='serverUrl'/>
+      <input type='submit' value='Save'>
     </form>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="popup.js"></script>
+    <script type="text/javascript" src="options.js"></script>
   </body>
 </html>
