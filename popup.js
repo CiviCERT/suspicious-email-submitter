@@ -8,6 +8,7 @@ $('#settings').click(function(event) {
 
 
 if (data) {
+  $('#submit').removeAttr('disabled');
   $('#data').text(data);
 
   document.forms["form"].addEventListener('submit', function(event) {
@@ -27,5 +28,6 @@ if (data) {
     }
   });
 } else if (status) {
+  $('#submit').attr('disabled', 'disabled');
   $('.data').text(status);
 }
