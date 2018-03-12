@@ -46,7 +46,9 @@ if (data) {
 }
         })
       }).then(function(response) {
-        var eventId = response.Event.id;
+        return response.json();
+      }).then(function(object) {
+        var eventId = object.Event.id;
         console.log("Created event", eventId);
       }).catch(function(error) {
         console.log(error);
