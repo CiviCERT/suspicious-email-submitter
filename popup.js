@@ -33,6 +33,9 @@ if (data) {
         body   : JSON.stringify({
           "Event": {
               "info": "test",
+              "distribution": 0,
+              "threat_level_id": 3,
+              "analysis": 1,
               "Attribute": [
                 {
                   'Category': 'Payload delivery',
