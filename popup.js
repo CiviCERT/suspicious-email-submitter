@@ -52,5 +52,9 @@ if (data) {
   });
 } else if (status) {
   $('#submit').attr('disabled', 'disabled');
-  $('.data').text(status);
+  if (status === '0') {
+    $('.data').text('Failed to download email. Check your internet connection.');
+  } else if (status >= 500) {
+    $('.data').text('Email server error');
+  }
 }
