@@ -13,8 +13,9 @@ if (data) {
 
   document.forms["form"].addEventListener('submit', function(event) {
     event.preventDefault();
-    var serverUrl = localStorage.getItem('serverUrl');
-    var authToken = localStorage.getItem('authToken');
+    var config = SESConfig.getSelectedConfiguration();
+    var serverUrl = config.serverUrl;
+    var authToken = config.authToken;
     if (typeof serverUrl !== 'string' || serverUrl.length === 0) {
       // handle invalid server url
     } else {
