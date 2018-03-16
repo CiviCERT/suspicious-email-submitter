@@ -13,7 +13,6 @@ function importConfig(file) {
   return new Promise(function(resolve, reject) {
     var reader = new FileReader()
     reader.onload = function(event) {
-        console.log(event.target.result);
         var config;
         try {
           config = JSON.parse(event.target.result);
