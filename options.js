@@ -1,6 +1,7 @@
 function populateCurrent(config) {
   $('#current .name').text(config.name);
   $('#current .logo').attr('src', config.logo);
+  $('#current').show();
 }
 function populateForm(config) {
   for (field in config) {
