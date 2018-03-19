@@ -6,10 +6,13 @@ $('#settings').click(function(event) {
   window.open('/options.html');
 });
 
-
 if (data) {
   $('#submit').removeAttr('disabled');
   $('#data').text(data);
+
+  var config = SESConfig.getSelectedConfiguration();
+  $('#destination .name').text(config.name);
+  $('#destination .logo').attr('src', config.logo);
 
   document.forms["form"].addEventListener('submit', function(event) {
     event.preventDefault();

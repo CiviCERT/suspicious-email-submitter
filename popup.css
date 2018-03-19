@@ -1,8 +1,0 @@
-.data {
-  width: 500px;
-  max-height: 300px;
-  overflow: auto;
-  border: solid 1px;
-  margin: 10px;
-  padding: 5px;
-}

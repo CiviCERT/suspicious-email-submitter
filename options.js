@@ -7,8 +7,20 @@ function populateForm(config) {
   for (field in config) {
     $('#'+field).val(config[field]);
   }
+  $('#logoPreview').attr('src', config.logo);
+  $('#logoFile').val('');
 }
 
+function loadImage(file) {
+  return new Promise(function(resolve, reject) {
+    var reader = new FileReader()
+    reader.onload = function(event) {
+        resolve(event.target.result);
+    }
+    reader.onerror = reject;
+    reader.readAsDataURL(file)
+  });
+}
 function importConfig(file) {
   return new Promise(function(resolve, reject) {
     var reader = new FileReader()
@@ -51,6 +63,16 @@ $(window).bind('drop', function(event) {
     return false;
 })
 
+$('#logoFile').change(function(event) {
+  loadImage(event.target.files[0]).then(function(dataUrl) {
+    $('#logo').val(dataUrl);
+    $('#logoPreview').attr('src', dataUrl);
+  }).catch(function(error) {
+    $('#logoFile').val('');
+    alert(error.message);
+  });
+});
+
 $('#importFile').change(function(event) {
   importConfig(event.target.files[0]).then(function() {
     $('#importFile').val('');
@@ -65,7 +87,8 @@ function handleSubmit(event) {
   var config = {
     serverUrl: $('#serverUrl').val(),
     authToken: $('#authToken').val(),
-    name: $('#name').val()
+    name: $('#name').val(),
+    logo: $('#logo').val()
   };
   SESConfig.saveConfiguration(config);
   populateCurrent(config);
@@ -77,8 +100,8 @@ $('#export').click(function handleExport(event) {
   var config = SESConfig.getSelectedConfiguration();
   var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(config));
   var downloadAnchorNode = document.createElement('a');
-  downloadAnchorNode.setAttribute("href",     dataStr);
-  downloadAnchorNode.setAttribute("download", config.name + "-suspicious-email-submitter.json");
+  downloadAnchorNode.setAttribute("href", dataStr);
+  downloadAnchorNode.setAttribute("download", "suspicious-email-submitter-" + config.name + ".json");
   downloadAnchorNode.click();
   downloadAnchorNode.remove();
 });

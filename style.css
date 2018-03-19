@@ -8,7 +8,7 @@ fieldset {
   min-width: 300px;
 }
 
-#current .logo {
+img.logo {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
@@ -22,4 +22,12 @@ fieldset {
   content: "";
   display: block;
   clear: both;
+}
+.data {
+  width: 500px;
+  max-height: 300px;
+  overflow: auto;
+  border: solid 1px;
+  margin: 10px 0;
+  padding: 5px;
 }

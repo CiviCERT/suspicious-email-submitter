@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='/images/icon_128.png' rel='shortcut icon'>
-    <link href="/options.css" rel="stylesheet" type="text/css" />
+    <link href='/style.css' rel='stylesheet' type='text/css' />
   </head>
   <body>
     <h1>SES Settings</h1>
@@ -30,6 +30,16 @@
           <summary>Advanced</summary>
           <fieldset>
             <table>
+              <tr>
+                <td>
+                  <label for='logo'>Logo</label>
+                </td>
+                <td>
+                  <img class='logo' id='logoPreview'></img>
+                  <input type='hidden' id='logo' name='logo'></img>
+                  <input type='file' id='logoFile' class='setting' name='logo'/>
+                </td>
+              </tr>
               <tr>
                 <td>
                   <label for='name'>Name</label>
