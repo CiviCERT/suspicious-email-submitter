@@ -85,7 +85,7 @@
   }
 
   function removeConfiguration(name) {
-    localStorage.removeItem(name);
+    localStorage.removeItem(configStorageKey(name));
   }
 
   window.SESConfig = {
