@@ -1,4 +1,7 @@
-#form {
+#status {
+  white-space: pre;
+}
+#options #form {
   margin: 10px 0;
 }
 fieldset {
@@ -30,4 +33,22 @@ img.logo {
   border: solid 1px;
   margin: 10px 0;
   padding: 5px;
+}
+
+#popup #form {
+  display: none;
+}
+#popup #notConfigured {
+  display: none;
+}
+#popup #notConfigured .openSettings {
+  float: right;
+  margin-bottom: 10px;
+}
+#popup #submit {
+  float: right;
+}
+#popup .logo {
+  width: 32px;
+  height: 32px;
 }

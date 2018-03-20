@@ -1,79 +1,95 @@
-var data = new URL(location).searchParams.get('data');
-var status = new URL(location).searchParams.get('status');
+(function() {
+  function handleResult(result, status) {
+    if (!result) {
+      // Something is not right.
+      $('#submit').attr('disabled', 'disabled');
 
-$('#settings').click(function(event) {
-  event.preventDefault();
-  window.open('/options.html');
-});
+      if (!status || status == -1) {
+        // this page is probably not an email
+        $('#status').text('Click this button when you see a suspicious email.');
+      } else {
+        // http error?
+        if (status === '0') {
+          $('#status').text('Failed to download email. Check your internet connection.');
+        } else if (status >= 500) {
+          $('#status').text('Email server error. Try again later.');
+        }
+      }
 
-if (data) {
-  $('#submit').removeAttr('disabled');
-  $('#data').text(data);
+    } else { // got a  result
+      $('#status').hide();
+      $('#form').show();
+      $('#submit').removeAttr('disabled');
+      $('#data').text(result);
 
-  var config = SESConfig.getSelectedConfiguration();
-  $('#destination .name').text(config.name);
-  $('#destination .logo').attr('src', config.logo);
+      var config = SESConfig.getSelectedConfiguration();
+      $('#destination .name').text(config.name);
+      $('#destination .logo').attr('src', config.logo);
 
-  document.forms["form"].addEventListener('submit', function(event) {
-    event.preventDefault();
-    var config = SESConfig.getSelectedConfiguration();
-    var serverUrl = config.serverUrl;
-    var authToken = config.authToken;
-    if (typeof serverUrl !== 'string' || serverUrl.length === 0) {
-      // handle invalid server url
-    } else {
-      // curl -i -H "Accept: application/json"
-      //      -H "content-type: application/json"
-      //      -H "Authorization: a4PLf8QICdDdOmFjwdtSYqkCqn9CvN0VQt7mpUUf"
-      //      --data "@event.json" -X POST http://server/events
-      //
-      fetch(serverUrl + '/events', {
-        method : 'POST',
-        headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json",
-          "Authorization": authToken
-        },
-        body   : JSON.stringify({
-          "Event": {
-            "info": "test", // TODO: insert email subject here?
-            "distribution": 0,
-            "threat_level_id": 3,
-            "analysis": 1,
-            "Object": [
-              {
-                //TODO: Pull the following magic numbers from email template?
-                'name': 'email',
-                'meta-category': 'network',
-                'description': 'Email object describing an email with meta-information',
-                'template_uuid': 'a0c666e0-fc65-4be8-b48f-3423d788b552',
-                'template_version': 8,
-                'Attribute': [
-                  {
-                    'Category': 'Payload delivery',
-                    'type': 'email-body',
-                    'value': data
-                  }
-                ],
-              }
-            ]
-          }
-        })
-      }).then(function(response) {
-        return response.json();
-      }).then(function(object) {
-        var eventId = object.Event.id;
-        console.log("Created event", eventId);
-      }).catch(function(error) {
-        console.log(error);
+      document.forms["form"].addEventListener('submit', function(event) {
+        event.preventDefault();
+        var config = SESConfig.getSelectedConfiguration();
+        var serverUrl = config.serverUrl;
+        var authToken = config.authToken;
+        if (typeof serverUrl !== 'string' || serverUrl.length === 0) {
+          //TODO: handle invalid server url
+        } else {
+          window.mailToMisp(serverUrl, authToken, result).then(function(response) {
+            return response.json();
+          }).then(function(object) {
+            var eventId = object.Event.id;
+            console.log("Created event", eventId);
+          }).catch(function(error) {
+            console.log(error);
+          });
+        }
       });
     }
-  });
-} else if (status) {
-  $('#submit').attr('disabled', 'disabled');
-  if (status === '0') {
-    $('.data').text('Failed to download email. Check your internet connection.');
-  } else if (status >= 500) {
-    $('.data').text('Email server error');
   }
-}
+
+  function executeContentScript() {
+    return new Promise(function(resolve, reject) {
+      // Listen for message from the content script
+      try {
+        chrome.tabs.executeScript(null, {
+          file: 'bundle.js'
+        }, function(results) {
+          var error = chrome.runtime.lastError;
+          if (!error && results.length && !results[0]) {
+            console.log(results[0]);
+            resolve(results[0]);
+          } else {
+            reject(error);
+          }
+        });
+      } catch(error) {
+        reject(error);
+      }
+    });
+  }
+
+  $('.openSettings').click(function(event) {
+    event.preventDefault();
+    window.open('/options.html');
+  });
+
+  try {
+    var config = SESConfig.getSelectedConfiguration();
+  } catch(error) {
+    $('#status').text("This is your suspicious email submitter, but it is not configured yet.");
+    $('#notConfigured').show();
+    return; // bail!
+  }
+
+  chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+    if (sender.tab) {
+      console.log(message);
+      handleResult(message.result, message.status);
+    }
+  });
+
+  executeContentScript().catch(function(error) {
+    console.log(error);
+    handleResult(null, -1);
+  })
+})();

@@ -10,21 +10,26 @@
     <link href='/images/icon_128.png' rel='shortcut icon'>
     <link href='/style.css' rel='stylesheet' type='text/css' />
   </head>
-  <body>
-    <h1>This email smells phishy</h1>
+  <body id='popup'>
+    <p id='status'>Scanning this tab for email...</p>
+    <div id='notConfigured'>
+      <button class='openSettings'>Settings</button>
+    </div>
     <form id="form">
+      <h1>Does this email seem suspicious?</h1>
       <pre id='data' class='data'></pre>
       <div id='destination'>
-        <p>Send this email to:</p>
+        <p>SES is currently configured to send emails to:</p>
         <p class='clearfix'>
           <img class='logo'></img><span class='name'></span>
         </div>
       </div>
+      <button id='settings' class='openSettings'>Settings</button>
       <input id='submit' type='submit' value='Send it'>
-      <button id='settings'>Settings</button>
     </form>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="misp.js"></script>
     <script type="text/javascript" src="popup.js"></script>
   </body>
 </html>
