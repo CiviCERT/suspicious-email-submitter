@@ -30,7 +30,7 @@
                 {
                   'Category': 'Payload delivery',
                   'type': 'email-body',
-                  'value': result
+                  'value': rawEmail
                 }
               ],
             }
