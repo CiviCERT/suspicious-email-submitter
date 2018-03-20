@@ -3,7 +3,7 @@
   "name": "SES",
   "version": "0.0.0",
   "background": {
-    "scripts": ["background.js"]
+    "page": "background.html"
   },
   "browser_action" : {
     "default_title" : "Suspicious Email Submitter",
