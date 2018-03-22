@@ -28,6 +28,7 @@
 
       document.forms["form"].addEventListener('submit', function(event) {
         event.preventDefault();
+        $('#submit').attr('disabled', 'disabled');
         var config = SESConfig.getSelectedConfiguration();
         var serverUrl = config.serverUrl;
         var authToken = config.authToken;
@@ -39,6 +40,8 @@
           }).then(function(object) {
             var eventId = object.Event.id;
             console.log("Created event", eventId);
+            $('#submit').hide();
+            $('#thanks').show();
           }).catch(function(error) {
             console.log(error);
           });
