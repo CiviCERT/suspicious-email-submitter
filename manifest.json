@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Suspicious Email Submitter",
   "short_name": "SES",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "background": {
     "page": "background.html"
   },
