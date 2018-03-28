@@ -1,9 +1,5 @@
 (function() {
-  // curl -i -H "Accept: application/json"
-  //      -H "content-type: application/json"
-  //      -H "Authorization: a4PLf8QICdDdOmFjwdtSYqkCqn9CvN0VQt7mpUUf"
-  //      --data "@event.json" -X POST http://server/events
-  //
+  // https://www.circl.lu/doc/misp/automation/
   window.mailToMisp = function(serverUrl, authToken, rawEmail) {
     return fetch(serverUrl + '/events', {
       method : 'POST',
