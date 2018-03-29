@@ -4,17 +4,17 @@
     return fetch(serverUrl + '/events', {
       method : 'POST',
       headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-        "Authorization": authToken
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': authToken
       },
       body   : JSON.stringify({
-        "Event": {
-          "info": "test", // TODO: insert email subject here?
-          "distribution": 0,
-          "threat_level_id": 3,
-          "analysis": 1,
-          "Object": [
+        'Event': {
+          'info': 'test', // TODO: insert email subject here?
+          'distribution': 0,
+          'threat_level_id': 3,
+          'analysis': 1,
+          'Object': [
             {
               //TODO: Pull the following magic numbers from email template?
               'name': 'email',
