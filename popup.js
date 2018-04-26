@@ -38,10 +38,17 @@
           window.mailToMisp(serverUrl, authToken, result).then(function(response) {
             return response.json();
           }).then(function(object) {
-            var eventId = object.Event.id;
-            console.log("Created event", eventId);
-            $('#submit').hide();
-            $('#thanks').show();
+            if (object.Event) {
+              var eventId = object.Event.id;
+              console.log("Created event", eventId);
+              $('#submit').hide();
+              $('#thanks').show();
+            } else {
+              $('#submit').hide();
+              $('#error').show();
+              console.log("Failed to create event");
+              console.log(object);
+            }
           }).catch(function(error) {
             console.log(error);
           });
