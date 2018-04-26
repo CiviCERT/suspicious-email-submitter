@@ -24,8 +24,8 @@
               'template_version': 8,
               'Attribute': [
                 {
-                  'Category': 'Payload delivery',
-                  'type': 'email-body',
+                  'category': 'Payload delivery',
+                  'object_relation': 'email-body',
                   'value': rawEmail
                 }
               ],
