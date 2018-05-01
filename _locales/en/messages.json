@@ -1,6 +1,86 @@
 {
-    "key": {
-      "message": "A message.",
-      "description": "How it's used."
+    "popupLoading": {
+      "message": "Loading...",
+      "description": "Displayed on the popup page while loading the raw email."
+    },
+    "popupSettings": {
+      "message": "Settings",
+      "description": "Label for a button on the popup page to open the settings page."
+    },
+    "popupHeader": {
+      "message": "Does this email seem suspicious?",
+      "description": "Header for the popup page."
+    },
+    "popupCurrent": {
+      "message": "SES is currently configured to send emails to:",
+      "description": "Displayed on the popup page above the organization name/logo."
+    },
+    "popupSend": {
+      "message": "Send",
+      "description": "Header for the popup page."
+    },
+    "popupSent": {
+      "message": "Sent, thanks!",
+      "description": "Header for the popup page."
+    },
+    "popupMispServerError": {
+      "message": "MISP server error!",
+      "description": "Displayed when we get an error code from the MISP server."
+    },
+    "popupNoEmailDeteceted": {
+      "message": "Click this button when you see a suspicious email.",
+      "description": "Displayed when current tab is not an email."
+    },
+    "popupDownloadFailed": {
+      "message": "Failed to download email. Check your internet connection.",
+      "description": "Displayed when the email download failed to connect."
+    },
+    "popupEmailServerError": {
+      "message": "Email server error. Try again later.",
+      "description": "Displayed when the email server returned an error."
+    },
+    "popupNotConfigured": {
+      "message": "This is your suspicious email submitter, but it is not configured yet.",
+      "description": "Displayed in popup if extension isn't configured."
+    },
+    "optionsTitle": {
+      "message": "SES Settings",
+      "description": "Page/tab title for the options page"
+    },
+    "optionsConfigurationInstructions": {
+      "message": "To configure SES, drag and drop a configuration file on this tab, or <a href='/' id='chooseFile'>choose a file</a>.",
+      "description": "How to configure the extension."
+    },
+    "optionsAdvanced": {
+      "message": "Advanced",
+      "description": "Label for button to show advanced settings."
+    },
+    "optionsAdvancedLogo": {
+      "message": "Logo",
+      "description": "Label for logo field."
+    },
+    "optionsAdvancedName": {
+      "message": "Name",
+      "description": "Label for name field."
+    },
+    "optionsAdvancedServerUrl": {
+      "message": "Server URL",
+      "description": "Label for server url field."
+    },
+    "optionsAdvancedAuthToken": {
+      "message": "Auth Token",
+      "description": "Label for auth token field."
+    },
+    "optionsAdvancedSave": {
+      "message": "Save",
+      "description": "Label for save button."
+    },
+    "optionsAdvancedExport": {
+      "message": "Export",
+      "description": "Label for export button."
+    },
+    "optionsCurrent": {
+      "message": "SES is currently configured to send emails to:",
+      "description": "Displayed on the options page"
     }
 }

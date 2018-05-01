@@ -3,6 +3,7 @@
   "name": "Suspicious Email Submitter",
   "short_name": "SES",
   "version": "1.0.1",
+  "default_locale": "en",
   "background": {
     "page": "background.html"
   },

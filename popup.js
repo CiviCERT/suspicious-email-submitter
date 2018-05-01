@@ -6,13 +6,13 @@
 
       if (!status || status == -1) {
         // this page is probably not an email
-        $('#status').text('Click this button when you see a suspicious email.');
+        $('#status').text(chrome.i18n.getMessage('popupNoEmailDeteceted'));
       } else {
         // http error?
         if (status === '0') {
-          $('#status').text('Failed to download email. Check your internet connection.');
+          $('#status').text(chrome.i18n.getMessage('popupDownloadFailed'));
         } else if (status >= 500) {
-          $('#status').text('Email server error. Try again later.');
+          $('#status').text(chrome.i18n.getMessage('popupEmailServerError'));
         }
       }
 
@@ -79,7 +79,7 @@
   try {
     var config = SESConfig.getSelectedConfiguration();
   } catch(error) {
-    $('#status').text("This is your suspicious email submitter, but it is not configured yet.");
+    $('#status').text(chrome.i18n.getMessage('popupNotConfigured'));
     $('#notConfigured').show();
     return; // bail!
   }
