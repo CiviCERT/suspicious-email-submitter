@@ -11,26 +11,27 @@
     <link href='/style.css' rel='stylesheet' type='text/css' />
   </head>
   <body id='popup'>
-    <p id='status'>Loading...</p>
+    <p id='status' data-resource='popupLoading'>Loading...</p>
     <div id='notConfigured'>
-      <button class='openSettings'>Settings</button>
+      <button class='openSettings' data-resource='popupSettings'>Settings</button>
     </div>
     <form id="form">
-      <h1>Does this email seem suspicious?</h1>
+      <h1 data-resource='popupHeader'>Does this email seem suspicious?</h1>
       <pre id='data' class='data'></pre>
       <div id='destination'>
-        <p>SES is currently configured to send emails to:</p>
+        <p data-resource='popupCurrent'>SES is currently configured to send emails to:</p>
         <p class='clearfix'>
           <img class='logo'></img><span class='name'></span>
         </div>
       </div>
-      <button id='settings' class='openSettings'>Settings</button>
-      <input id='submit' type='submit' value='Send'>
+      <button id='settings' class='openSettings' data-resource='popupSettings'>Settings</button>
+      <input id='submit' type='submit' value='Send' data-resource='popupSend'>
       <div id='thanks'>
-        <span>Sent, thanks!</span>
+        <span data-resource='popupSent'>Sent, thanks!</span>
       </div>
     </form>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="i18n.js"></script>
     <script type="text/javascript" src="config.js"></script>
     <script type="text/javascript" src="misp.js"></script>
     <script type="text/javascript" src="popup.js"></script>

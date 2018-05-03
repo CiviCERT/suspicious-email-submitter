@@ -14,25 +14,25 @@
     <h1>SES Settings</h1>
 
     <div id='current'>
-      <p>SES is currently configured to send emails to:</p>
+      <p data-resource='optionsCurrent'> </p>
       <div class='clearfix'>
         <img class='logo'></img><span class='name'></span>
       </div>
     </div>
     <div id='editor'>
-      <p>
+      <p data-resource='optionsConfigurationInstructions'>
       To configure SES, drag and drop a configuration file on this tab,
       or <a href='/' id='chooseFile'>choose a file</a>.
       </p>
       <input id='importFile' type='file' name='configFile'>
       <form id="form">
         <details>
-          <summary>Advanced</summary>
+          <summary data-resource='optionsAdvanced'>Advanced</summary>
           <fieldset>
             <table>
               <tr>
                 <td>
-                  <label for='logo'>Logo</label>
+                  <label for='logo' data-resource='optionsAdvancedLogo'>Logo</label>
                 </td>
                 <td>
                   <img class='logo' id='logoPreview'></img>
@@ -42,7 +42,7 @@
               </tr>
               <tr>
                 <td>
-                  <label for='name'>Name</label>
+                  <label for='name' data-resource='optionsAdvancedName'>Name</label>
                 </td>
                 <td>
                   <input type='text' id='name' class='setting' name='name'/>
@@ -50,7 +50,7 @@
               </tr>
               <tr>
                 <td>
-                  <label for='serverUrl'>Server URL</label>
+                  <label for='serverUrl' data-resource='optionsAdvancedServerUrl'>Server URL</label>
                 </td>
                 <td>
                   <input type='text' id='serverUrl' class='setting' name='serverUrl'/>
@@ -58,21 +58,22 @@
               </tr>
               <tr>
                 <td>
-                  <label for='authToken'>Auth Token</label>
+                  <label for='authToken' data-resource='optionsAdvancedAuthToken'>Auth Token</label>
                 </td>
                 <td>
                   <input type='text' id='authToken' class='setting' name='authToken'/>
                 </td>
               </tr>
             </table>
-            <input type='submit' name='save' value='Save'>
-            <button id='export' name='export'>Export...</button>
+            <input type='submit' name='save' value='Save' data-resource='optionsAdvancedSave'>
+            <button id='export' name='export' data-resource='optionsAdvancedExport'>Export...</button>
           </fieldset>
         </details>
 
       </form>
     </div>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="i18n.js"></script>
     <script type="text/javascript" src="config.js"></script>
     <script type="text/javascript" src="options.js"></script>
   </body>
