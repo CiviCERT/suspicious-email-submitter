@@ -8,9 +8,8 @@
   var rawDownloadUrl;
 
   if (url.host === "mail.google.com") {
-    var selection = $('*[data-message-id]');
+    var selection = $('*[data-message-id]:visible');
     if (selection.length > 0) {
-      //TODO: Handle multiple message ids on the page
       var messageId = selection[0].dataset['messageId'];
       // https://mail.google.com/mail/u/0?view=att&th=MESSAGEID&attid=0&disp=comp&safe=1&zw
       rawDownloadUrl = url.origin + url.pathname + "?view=att&th=" + messageId + "&attid=0&disp=comp&safe=1&zw";
