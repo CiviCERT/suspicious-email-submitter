@@ -10,7 +10,7 @@
       },
       body   : JSON.stringify({
         'Event': {
-          'info': 'test', // TODO: insert email subject here?
+          'info': 'Suspicious Email Submitter',
           'distribution': 0,
           'threat_level_id': 3,
           'analysis': 1,
@@ -21,12 +21,14 @@
               'meta-category': 'network',
               'description': 'Email object describing an email with meta-information',
               'template_uuid': 'a0c666e0-fc65-4be8-b48f-3423d788b552',
-              'template_version': 8,
+              'template_version': 10,
               'Attribute': [
                 {
                   'category': 'Payload delivery',
-                  'object_relation': 'email-body',
-                  'value': rawEmail
+                  'type': 'attachment',
+                  'object_relation': 'eml',
+                  'value': 'Raw Email',
+                  'data': btoa(rawEmail)
                 }
               ],
             }
