@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+
+[suspicious-email-submitter.messagesjson]
+file_filter = _locales/<lang>/messages.json
+source_file = _locales/en/messages.json
+source_lang = en
+type = CHROME
+minimum_perc = 100
