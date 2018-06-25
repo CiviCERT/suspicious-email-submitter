@@ -48,7 +48,7 @@
       "description": "Page/tab title for the options page"
     },
     "optionsConfigurationInstructions": {
-      "message": "To configure SES, drag and drop a configuration file on this tab, or <a href='/' id='chooseFile'>choose a file</a>.",
+      "message": "To configure SES, drag and drop a configuration file on this tab, or choose a file.",
       "description": "How to configure the extension."
     },
     "optionsAdvanced": {

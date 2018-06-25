@@ -105,10 +105,6 @@ $('#export').click(function handleExport(event) {
   downloadAnchorNode.click();
   downloadAnchorNode.remove();
 });
-$('#chooseFile').click(function(event) {
-  event.preventDefault();
-  $('#importFile').click();
-});
 
 try {
   var config = SESConfig.getSelectedConfiguration();
