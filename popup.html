@@ -18,6 +18,13 @@
     <form id="form">
       <h1 data-resource='popupHeader'>Does this email seem suspicious?</h1>
       <pre id='data' class='data'></pre>
+      <div>
+        <input type='checkbox' id='followupEnable' name='followupEnable'/>
+        <label for='followupEnable' data-resource='followupOption'>
+          Please followup with me by email:
+        </label>
+        <input id='followupEmail' type='email' />
+      </div>
       <div id='destination'>
         <p data-resource='popupCurrent'>SES is currently configured to send emails to:</p>
         <p class='clearfix'>

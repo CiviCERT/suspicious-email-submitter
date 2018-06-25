@@ -53,3 +53,7 @@ img.logo {
   width: 32px;
   height: 32px;
 }
+
+#popup #followupOption {
+  margin-left: 10px;
+}

@@ -82,5 +82,9 @@
     "optionsCurrent": {
       "message": "SES is currently configured to send emails to:",
       "description": "Displayed on the options page"
+    },
+    "followupOption": {
+      "message": "Please follow up with me by email",
+      "description": "Option to receive email from the researcher"
     }
 }

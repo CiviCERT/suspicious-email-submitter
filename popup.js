@@ -1,4 +1,6 @@
 (function() {
+  var EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   function handleResult(result, status) {
     if (!result) {
       // Something is not right.
@@ -26,8 +28,22 @@
       $('#destination .name').text(config.name);
       $('#destination .logo').attr('src', config.logo);
 
+
+      function updateTextField(e) {
+        if ($('#followupEnable').is(':checked')) {
+          $('#followupEmail').removeAttr('disabled').focus();
+        } else {
+          $('#followupEmail').attr('disabled', 'disabled');
+        }
+      }
+      $('#followupEnable').change(updateTextField);
+      updateTextField();
+
       document.forms["form"].addEventListener('submit', function(event) {
         event.preventDefault();
+
+        var followupRequested = $('#followupEnable').is(':checked');
+
         $('#submit').attr('disabled', 'disabled');
         var config = SESConfig.getSelectedConfiguration();
         var serverUrl = config.serverUrl;
@@ -35,7 +51,17 @@
         if (typeof serverUrl !== 'string' || serverUrl.length === 0) {
           //TODO: handle invalid server url
         } else {
-          window.mailToMisp(serverUrl, authToken, result).then(function(response) {
+
+          var options = {};
+
+          if (followupRequested) {
+            var followupEmail = $('#followupEmail').val().trim();
+            if (followupEmail) {
+              options.annotations = ["Follow up with " + followupEmail];
+            }
+          }
+
+          window.mailToMisp(serverUrl, authToken, result, options).then(function(response) {
             return response.json();
           }).then(function(object) {
             if (object.Event) {
