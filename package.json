@@ -1,0 +1,13 @@
+{
+  "name": "suspicious-email-submitter",
+  "productName": "Suspicious Email Submitter",
+  "description": "Submits suspicious emails to your friendly neighborhood MISP instance",
+  "repository": "https://github.com/CiviCERT/suspicious-email-submitter.git",
+  "license": "GPL-3.0",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "cpy": "^7.0.1"
+  }
+}
