@@ -118,7 +118,7 @@
   }
 
   chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-    if (sender.tab) {
+    if (typeof message === 'object' && sender.tab) {
       console.log(message);
       handleResult(message.result, message.status);
     }

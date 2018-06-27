@@ -92,6 +92,7 @@ function handleSubmit(event) {
   };
   SESConfig.saveConfiguration(config);
   populateCurrent(config);
+  chrome.runtime.sendMessage(null, 'updateNameAndImage');
 }
 $('#form').submit(handleSubmit);
 $('#export').click(function handleExport(event) {

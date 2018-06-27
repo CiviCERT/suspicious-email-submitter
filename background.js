@@ -19,6 +19,12 @@ chrome.runtime.onInstalled.addListener(function(details) {
   }
 });
 
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+  if (typeof message === 'string'  && message === 'updateNameAndImage') {
+    updateNameAndImage();
+  }
+});
+
 try {
   updateNameAndImage();
   //TODO: update when config changes
