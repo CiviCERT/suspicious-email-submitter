@@ -9,9 +9,11 @@
     "cat": "cat jquery-3.3.1.min.js contentScript.js > bundle.js",
     "copy": "node build.js",
     "zip": "cd dist && zip -r dist.zip *",
-    "build": "npm run clean && npm run cat && npm run copy && npm run zip"
+    "build": "npm run clean && npm run cat && npm run copy && npm run zip",
+    "watch": "watch -p contentScript.js -c 'npm run cat'"
   },
   "devDependencies": {
-    "cpy": "^7.0.1"
+    "cpy": "^7.0.1",
+    "watch-cli": "^0.2.3"
   }
 }
