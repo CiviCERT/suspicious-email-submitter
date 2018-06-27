@@ -39,9 +39,9 @@ const VERSION = require('./manifest.json').version;
     ], unpacked, { parents: true });
     console.log('Files copied to', unpacked);
 
-    const zipcmd = "zip -r " + filename + ".zip " + unpacked + "/*";
+    const zipcmd = "pwd && zip -r " + filename + ".zip " + "*";
     console.log('Running', zipcmd);
-    await exec(zipcmd, (err, stdout, stderr) => {
+    await exec(zipcmd, {cwd: unpacked}, (err, stdout, stderr) => {
       if (err) {
         console.log(err);
       }
@@ -55,4 +55,6 @@ const VERSION = require('./manifest.json').version;
       }
 
     });
+
+    console.log('done');
 })();
