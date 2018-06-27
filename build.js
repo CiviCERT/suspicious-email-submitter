@@ -10,8 +10,12 @@ const VERSION = require('./manifest.json').version;
       }
 
       // the *entire* stdout and stderr (buffered)
-      console.log(`stdout: ${stdout}`);
-      console.log(`stderr: ${stderr}`);
+      if (stdout) {
+        console.log(stdout);
+      }
+      if (stderr) {
+        console.log(stderr);
+      }
 
     });
     const filename = 'ses-' + VERSION;
@@ -43,8 +47,12 @@ const VERSION = require('./manifest.json').version;
       }
 
       // the *entire* stdout and stderr (buffered)
-      console.log(`stdout: ${stdout}`);
-      console.log(`stderr: ${stderr}`);
+      if (stdout) {
+        console.log(stdout);
+      }
+      if (stderr) {
+        console.log(stderr);
+      }
 
     });
 })();
