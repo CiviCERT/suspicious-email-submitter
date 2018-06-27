@@ -5,7 +5,11 @@
   "repository": "https://github.com/CiviCERT/suspicious-email-submitter.git",
   "license": "GPL-3.0",
   "scripts": {
-    "build": "node build.js"
+    "clean": "rm -rf dist",
+    "cat": "cat jquery-3.3.1.min.js contentScript.js > bundle.js",
+    "copy": "node build.js",
+    "zip": "cd dist && zip -r dist.zip *",
+    "build": "npm run clean && npm run cat && npm run copy && npm run zip"
   },
   "devDependencies": {
     "cpy": "^7.0.1"
