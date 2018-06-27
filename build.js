@@ -35,7 +35,8 @@ const VERSION = require('./manifest.json').version;
       'popup.html',
       'popup.js',
       'style.css',
-      '_locales/**/*'
+      '_locales/**/*',
+      'icon_*.png'
     ], unpacked, { parents: true });
     console.log('Files copied to', unpacked);
 

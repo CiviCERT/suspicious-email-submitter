@@ -8,14 +8,18 @@ This project is hosted by the [Computer Incident Response Center for Civil Socie
 
 target platform  | target email providers | status
 --------- | ----- | -------
-Chrome/Chromium web browser | Google Mail | alpha 
-Firefox web browser | Google Mail | alpha 
-Thunderbird desktop client | all email providers | not started 
-Outlook desktop client | all email providers | not started 
+Chrome/Chromium web browser | Google Mail | alpha
+Firefox web browser | Google Mail | alpha
+Thunderbird desktop client | all email providers | not started
+Outlook desktop client | all email providers | not started
 
-The Suspicious Email Submitter is under heavy development and not currently available for public use. 
+The Suspicious Email Submitter is under heavy development and not currently available for public use.
 
-If you work with at-risk groups who would benefit from this tool and would like to participate in the private testing phase, please contact Michael Carbone <michael@accessnow.org> (OpenPGP fingerprint: D3D8 BEBF ECE8 91AC 46A7 30DE 63FC 4D26 84A7 33B4). 
+If you work with at-risk groups who would benefit from this tool and would like to participate in the private testing phase, please contact Michael Carbone <michael@accessnow.org> (OpenPGP fingerprint: D3D8 BEBF ECE8 91AC 46A7 30DE 63FC 4D26 84A7 33B4).
+
+# Attribution
+
+Icon created by "Kid A" (Indygo) from the Noun Project
 
 # License
 
