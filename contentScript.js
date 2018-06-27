@@ -6,18 +6,47 @@
   var rawDownloadUrl;
 
   if (url.host === "mail.google.com") {
+
+    /* GMAIL */
     var selection = $('*[data-message-id]:visible');
     if (selection.length > 0) {
       var messageId = selection[0].dataset['legacyMessageId'] || selection[0].dataset['messageId'];
       // https://mail.google.com/mail/u/0?view=att&th=MESSAGEID&attid=0&disp=comp&safe=1&zw
       rawDownloadUrl = url.origin + url.pathname + "?view=att&th=" + messageId + "&attid=0&disp=comp&safe=1&zw";
     }
+
   } else if (url.host === "mail.yahoo.com") {
-    // https://apis.mail.yahoo.com//ws/v3/mailboxes/@.id==VjN-R91iv4Ew7ABG6ZfcF9Y7tBeuWCmcCXV_rGL_DRMea7aKbRuuMjM9T2pzRtznS3DwBmBxuc2UTjmHlmQVvjcwMQ/messages/@.id==AOyS3goAAAMLWnG7EQJCIEz14Ds/content/rawplaintext?appid=YahooMailNeo&wssid=N54i/xPQPc9&ymreqid=a4b713d2-f6e2-6077-0111-1801db010000
-    var mailboxId = ''; // fixme
-    var messageId = ''; // fixme
-    rawDownloadUrl = 'https://apis.mail.yahoo.com//ws/v3/mailboxes/@.id==' +
-      mailboxId + '/messages/@.id==' + messageId + '/content/rawplaintext';
+
+    /* YAHOO */
+    // Find the mailbox, message, and wssid parameters in the DOM
+    var mailboxId, messageId, wssid;
+
+    var mailboxIdMatchData = document.body.innerHTML.match(/@.id==([^\/]*)\\/);
+    if (mailboxIdMatchData) {
+      mailboxId = mailboxIdMatchData[1];
+    }
+
+    var selection = $('*[data-mid]:visible');
+    if (selection.length > 1) {
+      selection = selection.filter(function(i, el) {
+        return $(el).closest('.offscreen').length == 0;
+      });
+    }
+    messageId = selection[0].dataset['mid'];
+
+    var wssidMatchData = document.body.innerHTML.match(/wssid:\"([^,"]*)\",/);
+    if (wssidMatchData) {
+      wssid = wssidMatchData[1];
+    }
+
+    if (mailboxId && messageId && wssid) {
+      // Construct the url that will serve the raw message
+      // https://apis.mail.yahoo.com//ws/v3/mailboxes/@.id==MAILBOXID/messages/@.id==MESSAGEID/content/rawplaintext?wssid=WSSID
+      rawDownloadUrl = 'https://apis.mail.yahoo.com//ws/v3/mailboxes' +
+        '/@.id==' + mailboxId + '/messages/@.id==' + messageId +
+        '/content/rawplaintext?wssid=' + wssid;
+    }
+
   }
 
   if (rawDownloadUrl) {
