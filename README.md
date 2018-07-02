@@ -6,16 +6,25 @@ This project is hosted by the [Computer Incident Response Center for Civil Socie
 
 # Current Development Status
 
-target platform  | target email providers | status
+target platform  | supported email providers | status
 --------- | ----- | -------
-Chrome/Chromium web browser | Google Mail | alpha
-Firefox web browser | Google Mail | alpha
-Thunderbird desktop client | all email providers | not started
-Outlook desktop client | all email providers | not started
+Chrome/Chromium web browser | Google Mail, Yahoo Mail (classic) | [beta](https://chrome.google.com/webstore/detail/suspicious-email-submitte/bbnpmodflbdhkjmcjklhckkmopnfjkab
+)
+Firefox web browser | Google Mail, Yahoo Mail (classic) | [beta](https://addons.mozilla.org/en-US/firefox/addon/suspicious-email-submitter/)
+Thunderbird desktop client | all email providers | [alpha](https://github.com/CiviCERT/suspicious-email-submitter-thunderbird)
+Outlook desktop client | all email providers | [not started](https://github.com/CiviCERT/suspicious-email-submitter-outlook)
 
-The Suspicious Email Submitter is under heavy development and not currently available for public use.
+# How to use
+
+Please see the [wiki](https://github.com/CiviCERT/suspicious-email-submitter/wiki) for instructions on how to use the Suspicious Email Submitter, as a user or as a provider.
+
+The Suspicious Email Submitter [requires a configuration file](https://github.com/CiviCERT/suspicious-email-submitter/wiki/Configuration-Files) in order to function.
 
 If you work with at-risk groups who would benefit from this tool and would like to participate in the private testing phase, please contact Michael Carbone <michael@accessnow.org> (OpenPGP fingerprint: D3D8 BEBF ECE8 91AC 46A7 30DE 63FC 4D26 84A7 33B4).
+
+# How to contribute
+
+To contribute to the Chrome/Chromium or Firefox extensions, please see the [Contributing file](https://github.com/CiviCERT/suspicious-email-submitter/blob/master/CONTRIBUTING.md). For the Thunderbird and Outlook add-ons, please wait for development to slow before contributing.
 
 # Attribution
 
