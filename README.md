@@ -8,8 +8,7 @@ This project is hosted by the [Computer Incident Response Center for Civil Socie
 
 target platform  | supported email providers | status
 --------- | ----- | -------
-Chrome/Chromium web browser | Google Mail, Yahoo Mail (classic) | [beta](https://chrome.google.com/webstore/detail/suspicious-email-submitte/bbnpmodflbdhkjmcjklhckkmopnfjkab
-)
+Chrome/Chromium web browser | Google Mail, Yahoo Mail (classic) | [beta](https://chrome.google.com/webstore/detail/suspicious-email-submitte/bbnpmodflbdhkjmcjklhckkmopnfjkab)
 Firefox web browser | Google Mail, Yahoo Mail (classic) | [beta](https://addons.mozilla.org/en-US/firefox/addon/suspicious-email-submitter/)
 Thunderbird desktop client | all email providers | [alpha](https://github.com/CiviCERT/suspicious-email-submitter-thunderbird)
 Outlook desktop client | all email providers | [not started](https://github.com/CiviCERT/suspicious-email-submitter-outlook)
