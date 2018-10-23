@@ -1,0 +1,90 @@
+{
+    "optionsCurrent": {
+        "message": "SES actualmente está configurado para enviar correos electrónicos a:",
+        "description": "Displayed on the options page"
+    },
+    "popupSend": {
+        "message": "Enviar",
+        "description": "Header for the popup page."
+    },
+    "optionsAdvancedServerUrl": {
+        "message": "URL del servidor",
+        "description": "Label for server url field."
+    },
+    "popupNoEmailDeteceted": {
+        "message": "Haga clic en este botón cuando vea un correo electrónico sospechoso.",
+        "description": "Displayed when current tab is not an email."
+    },
+    "popupSent": {
+        "message": "Enviado, ¡gracias!",
+        "description": "Header for the popup page."
+    },
+    "popupCurrent": {
+        "message": "SES actualmente está configurado para enviar correos electrónicos a:",
+        "description": "Displayed on the popup page above the organization name/logo."
+    },
+    "followupOption": {
+        "message": "Por favor, sigue en contacto conmigo por correo electrónico",
+        "description": "Option to receive email from the researcher"
+    },
+    "popupMispServerError": {
+        "message": "¡Error del servidor MISP!",
+        "description": "Displayed when we get an error code from the MISP server."
+    },
+    "optionsConfigurationInstructions": {
+        "message": "Para configurar SES, arrastre y suelte un archivo de configuración en esta pestaña, o elija un archivo.",
+        "description": "How to configure the extension."
+    },
+    "popupLoading": {
+        "message": "Cargando...",
+        "description": "Displayed on the popup page while loading the raw email."
+    },
+    "popupEmailServerError": {
+        "message": "Error del servidor de correo electrónico. Inténtalo de nuevo más tarde.",
+        "description": "Displayed when the email server returned an error."
+    },
+    "popupSettings": {
+        "message": "Configuraciones",
+        "description": "Label for a button on the popup page to open the settings page."
+    },
+    "popupHeader": {
+        "message": "¿Este correo electrónico parece sospechoso?",
+        "description": "Header for the popup page."
+    },
+    "optionsAdvancedLogo": {
+        "message": "Logo",
+        "description": "Label for logo field."
+    },
+    "optionsAdvancedSave": {
+        "message": "Guardar",
+        "description": "Label for save button."
+    },
+    "optionsAdvancedExport": {
+        "message": "Exportar",
+        "description": "Label for export button."
+    },
+    "optionsAdvanced": {
+        "message": "Avanzadas",
+        "description": "Label for button to show advanced settings."
+    },
+    "popupNotConfigured": {
+        "message": "Este es su remitente de correo electrónico sospechoso, pero aún no está configurado.",
+        "description": "Displayed in popup if extension isn't configured."
+    },
+    "popupDownloadFailed": {
+        "message": "Error al descargar el correo electrónico. Comprueba tu conexión a Internet.",
+        "description": "Displayed when the email download failed to connect."
+    },
+    "optionsAdvancedAuthToken": {
+        "message": "Credencial de autentificación",
+        "description": "Label for auth token field."
+    },
+    "optionsTitle": {
+        "message": "Configuraciones de SES",
+        "description": "Page/tab title for the options page"
+    },
+    "optionsAdvancedName": {
+        "message": "Nombre",
+        "description": "Label for name field."
+    }
+}
