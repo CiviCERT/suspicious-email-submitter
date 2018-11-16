@@ -27,7 +27,7 @@ To contribute to the Chrome/Chromium or Firefox extensions, please see the [Cont
 
 # Attribution
 
-Icon created by "Kid A" (Indygo) from the Noun Project
+Icon created by "kiddo" ([Indygo](https://thenounproject.com/indygo/)) from the [Noun Project](https://thenounproject.com/term/unknown-email/503851/)
 
 # License
 
