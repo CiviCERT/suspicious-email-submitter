@@ -24,8 +24,15 @@
     }
   },
   "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false,
+    "browser_style": true
+  },
   "permissions" : [
     "*://*/*",
-    "tabs"
+    "tabs",
+    "mailTabs",     // thunderbird only
+    "messagesRead"  // thunderbird only
   ]
 }

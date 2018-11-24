@@ -136,8 +136,21 @@
     }
   });
 
-  executeContentScript().catch(function(error) {
-    console.log(error);
-    handleResult(null, -1);
-  })
+  if (window.browser && browser.mailTabs) {
+
+    // thunderbird
+    browser.mailTabs.getSelectedMessages().then(selectedMessages => {
+      let message = selectedMessages[0];
+      return browser.messages.get(message.messageId);
+    }).then(handleResult);;
+
+  } else {
+
+    // gmail chrome/ff
+    executeContentScript().catch(function(error) {
+      console.log(error);
+      handleResult(null, -1);
+    })
+
+  }
 })();
