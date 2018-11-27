@@ -44,7 +44,6 @@
 
         var followupRequested = $('#followupEnable').is(':checked');
 
-        $('#submit').attr('disabled', 'disabled');
         var config = SESConfig.getSelectedConfiguration();
         var serverUrl = config.serverUrl;
         var authToken = config.authToken;
@@ -52,32 +51,45 @@
           //TODO: handle invalid server url
         } else {
 
-          var options = {};
+          if (serverUrl.match(EMAIL_REGEX)) {
+            // Email endpoint: construct and click a mailto link
+            let href = [
+              "mailto:",
+              serverUrl,
+              "?subject=Suspicious%20Email%20Submission&body=",
+              encodeURIComponent(result)
+            ].join('');
+            chrome.tabs.update({ url: href });
 
-          if (followupRequested) {
-            var followupEmail = $('#followupEmail').val().trim();
-            if (followupEmail) {
-              options.annotations = ["Follow up with " + followupEmail];
+          } else {
+            $('#submit').attr('disabled', 'disabled');
+            var options = {};
+
+            if (followupRequested) {
+              var followupEmail = $('#followupEmail').val().trim();
+              if (followupEmail) {
+                options.annotations = ["Follow up with " + followupEmail];
+              }
             }
+
+            window.mailToMisp(serverUrl, authToken, result, options).then(function(response) {
+              return response.json();
+            }).then(function(object) {
+              if (object.Event) {
+                var eventId = object.Event.id;
+                console.log("Created event", eventId);
+                $('#submit').hide();
+                $('#thanks').show();
+              } else {
+                $('#submit').hide();
+                $('#error').show();
+                console.log("Failed to create event");
+                console.log(object);
+              }
+            }).catch(function(error) {
+              console.log(error);
+            });
           }
-
-          window.mailToMisp(serverUrl, authToken, result, options).then(function(response) {
-            return response.json();
-          }).then(function(object) {
-            if (object.Event) {
-              var eventId = object.Event.id;
-              console.log("Created event", eventId);
-              $('#submit').hide();
-              $('#thanks').show();
-            } else {
-              $('#submit').hide();
-              $('#error').show();
-              console.log("Failed to create event");
-              console.log(object);
-            }
-          }).catch(function(error) {
-            console.log(error);
-          });
         }
       });
     }
