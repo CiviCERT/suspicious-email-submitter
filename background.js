@@ -14,12 +14,14 @@ function updateNameAndImage() {
 }
 
 chrome.runtime.onInstalled.addListener(function(details) {
+  console.log("onInstalled");
   if (details.reason === 'install') {
     chrome.runtime.openOptionsPage();
   }
 });
 
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+  console.log("onMessage", message, sender);
   if (typeof message === 'string'  && message === 'updateNameAndImage') {
     updateNameAndImage();
   }
