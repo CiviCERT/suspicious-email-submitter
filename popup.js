@@ -138,11 +138,17 @@
 
   if (window.browser && browser.mailTabs) {
 
+    console.log("thuderbird detected");
     // thunderbird
-    browser.mailTabs.getSelectedMessages().then(selectedMessages => {
-      let message = selectedMessages[0];
-      return browser.messages.get(message.messageId);
-    }).then(handleResult);;
+    browser.mailTabs.getSelectedMessages().then(result => {
+      console.log("selected " + result.messages);
+      let message = result.messages[0];
+      return browser.messages.getFull(message.id)
+    }).then(function(parsedMessage) {
+      // reconstruct .eml?
+      // retun json for now
+      return JSON.stringify(parsedMessage);
+    }).then(handleResult);
 
   } else {
 

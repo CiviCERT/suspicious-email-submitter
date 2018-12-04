@@ -32,7 +32,6 @@
   "permissions" : [
     "*://*/*",
     "tabs",
-    "mailTabs",     // thunderbird only
-    "messagesRead"  // thunderbird only
+    "messagesRead"
   ]
 }
