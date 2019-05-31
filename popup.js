@@ -138,17 +138,25 @@
 
   if (window.browser && browser.mailTabs) {
 
-    console.log("thuderbird detected");
     // thunderbird
-    browser.mailTabs.getSelectedMessages().then(result => {
-      console.log("selected " + result.messages);
-      let message = result.messages[0];
-      return browser.messages.getFull(message.id)
-    }).then(function(parsedMessage) {
-      // reconstruct .eml?
-      // retun json for now
-      return JSON.stringify(parsedMessage);
-    }).then(handleResult);
+    var promise;
+    try {
+      promise = browser.mailTabs.getSelectedMessages();
+    } catch (e) {
+      // fixme: if the active tab is a message tab, getSelectedMessages throws.
+    }
+
+    if (promise) {
+      promise.then(result => {
+        let message = result.messages[0];
+        console.log("selected " + message.id);
+        return browser.messages.getFull(message.id)
+      }).then(function(parsedMessage) {
+        // reconstruct .eml?
+        // retun json for now
+        return parsedMessage.toSource(); // JSON.stringify
+      }).then(handleResult);
+    }
 
   } else {
 
