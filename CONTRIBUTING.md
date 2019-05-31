@@ -26,7 +26,7 @@ You can build/package a production extension for testing using npm:
 `npm install and npm run build`
 
 This will copy only the minimum necessary files to a clean `dist/` directory,
-and compress them into a `dist/dist.zip` suitable for upload to Chrome Webstore
+and compress them into a `dist.zip` suitable for upload to Chrome Webstore
 or FF Add-ons site.
 
 ## Adding a new email provider
