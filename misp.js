@@ -28,7 +28,7 @@
           objects.push(
             {
               'name': 'annotaion',
-              'meta-categiry': 'misc',
+              'meta-category': 'misc',
               'Attribute': [
                 {
                   'type': 'text',
