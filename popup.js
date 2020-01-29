@@ -137,26 +137,26 @@
   });
 
   if (window.browser && browser.mailTabs) {
-
     // thunderbird
-    var promise;
-    try {
-      promise = browser.mailTabs.getSelectedMessages();
-    } catch (e) {
-      // fixme: if the active tab is a message tab, getSelectedMessages throws.
-    }
+    console.log("thunderbird");
 
-    if (promise) {
-      promise.then(result => {
-        let message = result.messages[0];
-        console.log("selected " + message.id);
-        return browser.messages.getFull(message.id)
-      }).then(function(parsedMessage) {
-        // reconstruct .eml?
-        // retun json for now
-        return parsedMessage.toSource(); // JSON.stringify
-      }).then(handleResult);
-    }
+    var query = {
+      active: true,
+      windowId: browser.windows.WINDOW_ID_CURRENT
+    };
+    browser.tabs.query(query).then(function(result) {
+      return result[0];
+    }).then(function(tab){
+      if (tab.mailTab) {
+        return browser.mailTabs.getSelectedMessages(tab.id).then(function(list) {
+          return list.messages[0];
+        });
+      } else {
+        return browser.messageDisplay.getDisplayedMessage(tab.id);
+      }
+    }).then(function(message){
+      return browser.messages.getRaw(message.id)
+    }).then(handleResult);
 
   } else {
 
