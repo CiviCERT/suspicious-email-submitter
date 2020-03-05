@@ -1,47 +1,31 @@
 {
-    "optionsCurrent": {
-        "message": "SES est actuellement configuré pour envoyer des courriels à :",
-        "description": "Displayed on the options page"
+    "popupDownloadFailed": {
+        "message": "Échec de téléchargement du courriel. Veuillez vérifier votre connexion à Internet.",
+        "description": "Displayed when the email download failed to connect."
     },
-    "popupSend": {
-        "message": "Envoyer",
-        "description": "Header for the popup page."
+    "popupEmailServerError": {
+        "message": "Erreur du serveur de courriel. Veuillez ressayer ultérieurement.",
+        "description": "Displayed when the email server returned an error."
     },
     "optionsAdvancedServerUrl": {
         "message": "URL du serveur",
         "description": "Label for server url field."
     },
-    "popupNoEmailDeteceted": {
-        "message": "Cliquez sur ce bouton si vous voyez un courriel suspect.",
-        "description": "Displayed when current tab is not an email."
-    },
-    "popupSent": {
-        "message": "C’est envoyé, merci !",
-        "description": "Header for the popup page."
-    },
     "popupCurrent": {
         "message": "SES est actuellement configuré pour envoyer des courriels à :",
         "description": "Displayed on the popup page above the organization name/logo."
     },
-    "followupOption": {
-        "message": "Veuillez me tenir au courant par courriel",
-        "description": "Option to receive email from the researcher"
+    "optionsAdvancedAuthToken": {
+        "message": "Jeton d’authentification",
+        "description": "Label for auth token field."
+    },
+    "optionsCurrent": {
+        "message": "SES est actuellement configuré pour envoyer des courriels à :",
+        "description": "Displayed on the options page"
     },
     "popupMispServerError": {
         "message": "Erreur du serveur MISP !",
         "description": "Displayed when we get an error code from the MISP server."
-    },
-    "optionsConfigurationInstructions": {
-        "message": "Pour configurer SES, glissez-déposez le fichier de configuration sur cet onglet ou sélectionnez un fichier.",
-        "description": "How to configure the extension."
-    },
-    "popupLoading": {
-        "message": "Chargement…",
-        "description": "Displayed on the popup page while loading the raw email."
-    },
-    "popupEmailServerError": {
-        "message": "Erreur du serveur de courriel. Veuillez ressayer ultérieurement.",
-        "description": "Displayed when the email server returned an error."
     },
     "popupSettings": {
         "message": "Paramètres",
@@ -51,40 +35,56 @@
         "message": "Ce courriel semble-t-il suspect ?",
         "description": "Header for the popup page."
     },
-    "optionsAdvancedLogo": {
-        "message": "Logo",
-        "description": "Label for logo field."
-    },
     "optionsAdvancedSave": {
         "message": "Enregistrer",
         "description": "Label for save button."
-    },
-    "optionsAdvancedExport": {
-        "message": "Exporter",
-        "description": "Label for export button."
     },
     "optionsAdvanced": {
         "message": "Avancé",
         "description": "Label for button to show advanced settings."
     },
-    "popupNotConfigured": {
-        "message": "Ceci est votre diffuseur de courriels suspects, mais il n’est pas encore configuré.",
-        "description": "Displayed in popup if extension isn't configured."
+    "optionsAdvancedLogo": {
+        "message": "Logo",
+        "description": "Label for logo field."
     },
-    "popupDownloadFailed": {
-        "message": "Échec de téléchargement du courriel. Veuillez vérifier votre connexion à Internet.",
-        "description": "Displayed when the email download failed to connect."
-    },
-    "optionsAdvancedAuthToken": {
-        "message": "Jeton d’authentification",
-        "description": "Label for auth token field."
+    "popupSend": {
+        "message": "Envoyer",
+        "description": "Header for the popup page."
     },
     "optionsTitle": {
         "message": "Paramètres de SES",
         "description": "Page/tab title for the options page"
     },
+    "popupSent": {
+        "message": "C’est envoyé, merci !",
+        "description": "Header for the popup page."
+    },
+    "popupLoading": {
+        "message": "Chargement…",
+        "description": "Displayed on the popup page while loading the raw email."
+    },
+    "popupNotConfigured": {
+        "message": "Ceci est votre diffuseur de courriels suspects, mais il n’est pas encore configuré.",
+        "description": "Displayed in popup if extension isn't configured."
+    },
+    "optionsConfigurationInstructions": {
+        "message": "Pour configurer SES, glissez-déposez le fichier de configuration sur cet onglet ou sélectionnez un fichier.",
+        "description": "How to configure the extension."
+    },
+    "optionsAdvancedExport": {
+        "message": "Exporter",
+        "description": "Label for export button."
+    },
+    "popupNoEmailDeteceted": {
+        "message": "Cliquez sur ce bouton si vous voyez un courriel suspect.",
+        "description": "Displayed when current tab is not an email."
+    },
     "optionsAdvancedName": {
         "message": "Nom",
         "description": "Label for name field."
+    },
+    "followupOption": {
+        "message": "Veuillez me tenir au courant par courriel",
+        "description": "Option to receive email from the researcher"
     }
 }
