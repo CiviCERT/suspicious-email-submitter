@@ -1,0 +1,90 @@
+{
+    "popupDownloadFailed": {
+        "message": "Nedladdning av mail misslyckades. Kontrollera din internetanslutning. ",
+        "description": "Displayed when the email download failed to connect."
+    },
+    "popupEmailServerError": {
+        "message": "Problem med e-postserver. Försök igen senare. ",
+        "description": "Displayed when the email server returned an error."
+    },
+    "optionsAdvancedServerUrl": {
+        "message": "Server URL",
+        "description": "Label for server url field."
+    },
+    "popupCurrent": {
+        "message": "SES är inställt att skicka e-post till:",
+        "description": "Displayed on the popup page above the organization name/logo."
+    },
+    "optionsAdvancedAuthToken": {
+        "message": "Säkerhetstoken",
+        "description": "Label for auth token field."
+    },
+    "optionsCurrent": {
+        "message": "SES är inställt att skicka e-post till:",
+        "description": "Displayed on the options page"
+    },
+    "popupMispServerError": {
+        "message": "MISP-serverfel!",
+        "description": "Displayed when we get an error code from the MISP server."
+    },
+    "popupSettings": {
+        "message": "Inställningar",
+        "description": "Label for a button on the popup page to open the settings page."
+    },
+    "popupHeader": {
+        "message": "Verkar det här e-postmeddelandet misstänkt?",
+        "description": "Header for the popup page."
+    },
+    "optionsAdvancedSave": {
+        "message": "Spara",
+        "description": "Label for save button."
+    },
+    "optionsAdvanced": {
+        "message": "Avancerat",
+        "description": "Label for button to show advanced settings."
+    },
+    "optionsAdvancedLogo": {
+        "message": "Logga",
+        "description": "Label for logo field."
+    },
+    "popupSend": {
+        "message": "Skicka",
+        "description": "Header for the popup page."
+    },
+    "optionsTitle": {
+        "message": "SES inställningar",
+        "description": "Page/tab title for the options page"
+    },
+    "popupSent": {
+        "message": "Skickat, tack!",
+        "description": "Header for the popup page."
+    },
+    "popupLoading": {
+        "message": "Laddar…",
+        "description": "Displayed on the popup page while loading the raw email."
+    },
+    "popupNotConfigured": {
+        "message": "Det här är ditt program för att rapportera misstänkta e-postmeddelanden, men det är inte konfigurerat ännu.",
+        "description": "Displayed in popup if extension isn't configured."
+    },
+    "optionsConfigurationInstructions": {
+        "message": "För att ställa in SES, dra och släpp en konfigurationsfil på den här fliken, eller välj en fil. ",
+        "description": "How to configure the extension."
+    },
+    "optionsAdvancedExport": {
+        "message": "Exportera",
+        "description": "Label for export button."
+    },
+    "popupNoEmailDeteceted": {
+        "message": "Klicka på den här knappen när du ser ett misstänkt e-postmeddelande.",
+        "description": "Displayed when current tab is not an email."
+    },
+    "optionsAdvancedName": {
+        "message": "Namn",
+        "description": "Label for name field."
+    },
+    "followupOption": {
+        "message": "Vänligen återkoppla till mig via e-post.",
+        "description": "Option to receive email from the researcher"
+    }
+}

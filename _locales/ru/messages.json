@@ -1,0 +1,90 @@
+{
+    "popupDownloadFailed": {
+        "message": "Не удалось скачать email. Проверьте подключение к интернету.",
+        "description": "Displayed when the email download failed to connect."
+    },
+    "popupEmailServerError": {
+        "message": "Ошибка сервера электронной почты. Попробуйте позже.",
+        "description": "Displayed when the email server returned an error."
+    },
+    "optionsAdvancedServerUrl": {
+        "message": "URL сервера",
+        "description": "Label for server url field."
+    },
+    "popupCurrent": {
+        "message": "Сейчас SES настроен на отправку email по адресу:",
+        "description": "Displayed on the popup page above the organization name/logo."
+    },
+    "optionsAdvancedAuthToken": {
+        "message": "Токен авторизации",
+        "description": "Label for auth token field."
+    },
+    "optionsCurrent": {
+        "message": "Сейчас SES настроен на отправку email по адресу:",
+        "description": "Displayed on the options page"
+    },
+    "popupMispServerError": {
+        "message": "Ошибка сервера MISP",
+        "description": "Displayed when we get an error code from the MISP server."
+    },
+    "popupSettings": {
+        "message": "Настройки",
+        "description": "Label for a button on the popup page to open the settings page."
+    },
+    "popupHeader": {
+        "message": "Это письмо кажется подозрительным?",
+        "description": "Header for the popup page."
+    },
+    "optionsAdvancedSave": {
+        "message": "Сохранить",
+        "description": "Label for save button."
+    },
+    "optionsAdvanced": {
+        "message": "Дополнительно",
+        "description": "Label for button to show advanced settings."
+    },
+    "optionsAdvancedLogo": {
+        "message": "Логотип",
+        "description": "Label for logo field."
+    },
+    "popupSend": {
+        "message": "Отправить",
+        "description": "Header for the popup page."
+    },
+    "optionsTitle": {
+        "message": "Настройки SES",
+        "description": "Page/tab title for the options page"
+    },
+    "popupSent": {
+        "message": "Отправлено, спасибо!",
+        "description": "Header for the popup page."
+    },
+    "popupLoading": {
+        "message": "Загрузка...",
+        "description": "Displayed on the popup page while loading the raw email."
+    },
+    "popupNotConfigured": {
+        "message": "Это SES - инструмент для проверки подозрительных сообщений, но он еще не настроен.",
+        "description": "Displayed in popup if extension isn't configured."
+    },
+    "optionsConfigurationInstructions": {
+        "message": "Чтобы настроить SES, перетащите файл конфигурации на эту вкладку или выберите файл.",
+        "description": "How to configure the extension."
+    },
+    "optionsAdvancedExport": {
+        "message": "Экспорт",
+        "description": "Label for export button."
+    },
+    "popupNoEmailDeteceted": {
+        "message": "Нажмите эту кнопку, если увидите подозрительное письмо.",
+        "description": "Displayed when current tab is not an email."
+    },
+    "optionsAdvancedName": {
+        "message": "Название",
+        "description": "Label for name field."
+    },
+    "followupOption": {
+        "message": "Пожалуйста, держите меня в курсе по этому адресу",
+        "description": "Option to receive email from the researcher"
+    }
+}

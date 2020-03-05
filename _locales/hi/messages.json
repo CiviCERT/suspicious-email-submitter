@@ -1,0 +1,90 @@
+{
+    "popupDownloadFailed": {
+        "message": "ईमेल डाउनलोड करने में विफल। अपना इंटरनेट संपर्क जांचे।",
+        "description": "Displayed when the email download failed to connect."
+    },
+    "popupEmailServerError": {
+        "message": "ईमेल सर्वर त्रुटि। बाद में पुन: प्रयास करें।",
+        "description": "Displayed when the email server returned an error."
+    },
+    "optionsAdvancedServerUrl": {
+        "message": "सर्वर URL",
+        "description": "Label for server url field."
+    },
+    "popupCurrent": {
+        "message": "SES वर्तमान में: को ईमेल भेजने के लिए कॉन्फ़िगर किया गया है ।",
+        "description": "Displayed on the popup page above the organization name/logo."
+    },
+    "optionsAdvancedAuthToken": {
+        "message": "ऑथ टोकन",
+        "description": "Label for auth token field."
+    },
+    "optionsCurrent": {
+        "message": "SES वर्तमान में: को ईमेल भेजने के लिए कॉन्फ़िगर किया गया है ।",
+        "description": "Displayed on the options page"
+    },
+    "popupMispServerError": {
+        "message": "MISP सर्वर त्रुटि",
+        "description": "Displayed when we get an error code from the MISP server."
+    },
+    "popupSettings": {
+        "message": "सेटिंग्स",
+        "description": "Label for a button on the popup page to open the settings page."
+    },
+    "popupHeader": {
+        "message": "क्या यह ईमेल संदिग्ध प्रतीत होता है?",
+        "description": "Header for the popup page."
+    },
+    "optionsAdvancedSave": {
+        "message": "सुरक्षित करो",
+        "description": "Label for save button."
+    },
+    "optionsAdvanced": {
+        "message": "अग्रवर्ती",
+        "description": "Label for button to show advanced settings."
+    },
+    "optionsAdvancedLogo": {
+        "message": "लोगो",
+        "description": "Label for logo field."
+    },
+    "popupSend": {
+        "message": "भेजें",
+        "description": "Header for the popup page."
+    },
+    "optionsTitle": {
+        "message": "SES सेटिंग्स",
+        "description": "Page/tab title for the options page"
+    },
+    "popupSent": {
+        "message": "भेजा, धन्यवाद",
+        "description": "Header for the popup page."
+    },
+    "popupLoading": {
+        "message": "लोड हो रहा है ...",
+        "description": "Displayed on the popup page while loading the raw email."
+    },
+    "popupNotConfigured": {
+        "message": "यह आपका संदिग्ध ईमेल सबमिटकर्ता है, लेकिन यह अभी तक कॉन्फ़िगर नहीं है।",
+        "description": "Displayed in popup if extension isn't configured."
+    },
+    "optionsConfigurationInstructions": {
+        "message": "SES को कॉन्फ़िगर करने के लिए, इस टैब पर कॉन्फ़िगरेशन फ़ाइल खींचें और छोड़ें, या फ़ाइल चुनें।",
+        "description": "How to configure the extension."
+    },
+    "optionsAdvancedExport": {
+        "message": "निर्यात",
+        "description": "Label for export button."
+    },
+    "popupNoEmailDeteceted": {
+        "message": "जब आप एक संदिग्ध ईमेल देखते हैं तो इस बटन पर क्लिक करें।",
+        "description": "Displayed when current tab is not an email."
+    },
+    "optionsAdvancedName": {
+        "message": "नाम",
+        "description": "Label for name field."
+    },
+    "followupOption": {
+        "message": "ईमेल द्वारा मुझसे बात करें।",
+        "description": "Option to receive email from the researcher"
+    }
+}

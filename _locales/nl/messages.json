@@ -1,0 +1,90 @@
+{
+    "popupDownloadFailed": {
+        "message": "E-mail downloaden mislukt. Controleer uw internetverbinding.",
+        "description": "Displayed when the email download failed to connect."
+    },
+    "popupEmailServerError": {
+        "message": "E-mail serverfout. Probeer het later opnieuw.",
+        "description": "Displayed when the email server returned an error."
+    },
+    "optionsAdvancedServerUrl": {
+        "message": "Server URL",
+        "description": "Label for server url field."
+    },
+    "popupCurrent": {
+        "message": "De extensie is momenteel ingesteld om e-mails door te sturen naar:",
+        "description": "Displayed on the popup page above the organization name/logo."
+    },
+    "optionsAdvancedAuthToken": {
+        "message": "Authenticatiecode",
+        "description": "Label for auth token field."
+    },
+    "optionsCurrent": {
+        "message": "De extensie is momenteel ingesteld om e-mails door te sturen naar:",
+        "description": "Displayed on the options page"
+    },
+    "popupMispServerError": {
+        "message": "MISP serverfout!",
+        "description": "Displayed when we get an error code from the MISP server."
+    },
+    "popupSettings": {
+        "message": "Instellingen",
+        "description": "Label for a button on the popup page to open the settings page."
+    },
+    "popupHeader": {
+        "message": "Lijkt deze e-mail verdacht?",
+        "description": "Header for the popup page."
+    },
+    "optionsAdvancedSave": {
+        "message": "Opslaan",
+        "description": "Label for save button."
+    },
+    "optionsAdvanced": {
+        "message": "Geavanceerd",
+        "description": "Label for button to show advanced settings."
+    },
+    "optionsAdvancedLogo": {
+        "message": "Logo",
+        "description": "Label for logo field."
+    },
+    "popupSend": {
+        "message": "Verstuur",
+        "description": "Header for the popup page."
+    },
+    "optionsTitle": {
+        "message": "SES Instellingen",
+        "description": "Page/tab title for the options page"
+    },
+    "popupSent": {
+        "message": "Verzonden, bedankt!",
+        "description": "Header for the popup page."
+    },
+    "popupLoading": {
+        "message": "Laden...",
+        "description": "Displayed on the popup page while loading the raw email."
+    },
+    "popupNotConfigured": {
+        "message": "Dit is je extensie om verdachte e-mail in te dienen, maar de extensie is nog niet ingesteld.",
+        "description": "Displayed in popup if extension isn't configured."
+    },
+    "optionsConfigurationInstructions": {
+        "message": "Om de extensie te configureren, sleep een configuratiebestand naar dit tabblad, of kies een bestand.",
+        "description": "How to configure the extension."
+    },
+    "optionsAdvancedExport": {
+        "message": "Exporteren",
+        "description": "Label for export button."
+    },
+    "popupNoEmailDeteceted": {
+        "message": "Klik hier als je een verdachte e-mail ziet.",
+        "description": "Displayed when current tab is not an email."
+    },
+    "optionsAdvancedName": {
+        "message": "Naam",
+        "description": "Label for name field."
+    },
+    "followupOption": {
+        "message": "Houd me op de hoogte van mijn melding per e-mail",
+        "description": "Option to receive email from the researcher"
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "popupDownloadFailed": {
+        "message": "Αποτυχία λήψης του email. Ελέγξτε τη σύνδεση στο διαδίκτυο.",
+        "description": "Displayed when the email download failed to connect."
+    },
+    "popupEmailServerError": {
+        "message": "Σφάλμα διακομιστή ηλεκτρονικού ταχυδρομείου. Δοκιμάστε ξανά αργότερα.",
+        "description": "Displayed when the email server returned an error."
+    },
+    "optionsAdvancedServerUrl": {
+        "message": "URL διακομιστή",
+        "description": "Label for server url field."
+    },
+    "popupCurrent": {
+        "message": "Το SES είναι προς το παρόν ρυθμισμένο να στέλνει τα email στο:",
+        "description": "Displayed on the popup page above the organization name/logo."
+    },
+    "optionsAdvancedAuthToken": {
+        "message": "Token πιστοποίησης",
+        "description": "Label for auth token field."
+    },
+    "optionsCurrent": {
+        "message": "Το SES είναι προς το παρόν ρυθμισμένο να στέλνει τα email στο:",
+        "description": "Displayed on the options page"
+    },
+    "popupMispServerError": {
+        "message": "Σφάλμα διακομιστή MISP!",
+        "description": "Displayed when we get an error code from the MISP server."
+    },
+    "popupSettings": {
+        "message": "Ρυθμίσεις",
+        "description": "Label for a button on the popup page to open the settings page."
+    },
+    "popupHeader": {
+        "message": "Μήπως αυτό το email φαίνεται ύποπτο;",
+        "description": "Header for the popup page."
+    },
+    "optionsAdvancedSave": {
+        "message": "Αποθήκευση",
+        "description": "Label for save button."
+    },
+    "optionsAdvanced": {
+        "message": "Ρυθμίσεις για προχωρημένους",
+        "description": "Label for button to show advanced settings."
+    },
+    "optionsAdvancedLogo": {
+        "message": "Λογότυπο",
+        "description": "Label for logo field."
+    },
+    "popupSend": {
+        "message": "Αποστολή",
+        "description": "Header for the popup page."
+    },
+    "optionsTitle": {
+        "message": "Ρυθμίσεις SES",
+        "description": "Page/tab title for the options page"
+    },
+    "popupSent": {
+        "message": "Στάλθηκε, ευχαριστούμε!",
+        "description": "Header for the popup page."
+    },
+    "popupLoading": {
+        "message": "Φορτώνει...",
+        "description": "Displayed on the popup page while loading the raw email."
+    },
+    "popupNotConfigured": {
+        "message": "Αυτός είναι ο καταχωρητής υπόπτων email σας, αλλά δεν έχει ρυθμιστεί ακόμα.",
+        "description": "Displayed in popup if extension isn't configured."
+    },
+    "optionsConfigurationInstructions": {
+        "message": "Για να ρυθμίσετε το καταχωρητή υπόπτων email (SES) σας, σύρετε ένα αρχείο ρυθμίσεων σε αυτή την καρτέλα, ή επιλέξτε ένα αρχείο.",
+        "description": "How to configure the extension."
+    },
+    "optionsAdvancedExport": {
+        "message": "Εξαγωγή",
+        "description": "Label for export button."
+    },
+    "popupNoEmailDeteceted": {
+        "message": "Όταν δείτε ένα ύποπτο email, πατήστε αυτό το κουμπί.",
+        "description": "Displayed when current tab is not an email."
+    },
+    "optionsAdvancedName": {
+        "message": "Όνομα",
+        "description": "Label for name field."
+    },
+    "followupOption": {
+        "message": "Παρακαλώ ειδοποιήστε με για τυχόν εξελίξεις μέσω email.",
+        "description": "Option to receive email from the researcher"
+    }
+}

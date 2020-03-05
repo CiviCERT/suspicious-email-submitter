@@ -1,0 +1,90 @@
+{
+    "popupDownloadFailed": {
+        "message": "Email-Download fehlgeschlagen. Überprüfe deine Internetverbindung.",
+        "description": "Displayed when the email download failed to connect."
+    },
+    "popupEmailServerError": {
+        "message": "Serverfehler. Versuch es später noch einmal.",
+        "description": "Displayed when the email server returned an error."
+    },
+    "optionsAdvancedServerUrl": {
+        "message": "Server URL",
+        "description": "Label for server url field."
+    },
+    "popupCurrent": {
+        "message": "SES sendet Emails derzeit an:",
+        "description": "Displayed on the popup page above the organization name/logo."
+    },
+    "optionsAdvancedAuthToken": {
+        "message": "Authentifizierungs-Token",
+        "description": "Label for auth token field."
+    },
+    "optionsCurrent": {
+        "message": "SES sendet Emails derzeit an:",
+        "description": "Displayed on the options page"
+    },
+    "popupMispServerError": {
+        "message": "MISP Serverfehler!",
+        "description": "Displayed when we get an error code from the MISP server."
+    },
+    "popupSettings": {
+        "message": "Einstellungen",
+        "description": "Label for a button on the popup page to open the settings page."
+    },
+    "popupHeader": {
+        "message": "Sieht diese Email verdächtig aus?",
+        "description": "Header for the popup page."
+    },
+    "optionsAdvancedSave": {
+        "message": "Speichern",
+        "description": "Label for save button."
+    },
+    "optionsAdvanced": {
+        "message": "Fortgeschritten",
+        "description": "Label for button to show advanced settings."
+    },
+    "optionsAdvancedLogo": {
+        "message": "Logo",
+        "description": "Label for logo field."
+    },
+    "popupSend": {
+        "message": "Senden",
+        "description": "Header for the popup page."
+    },
+    "optionsTitle": {
+        "message": "SES Einstellungen",
+        "description": "Page/tab title for the options page"
+    },
+    "popupSent": {
+        "message": "Gesendet, danke!",
+        "description": "Header for the popup page."
+    },
+    "popupLoading": {
+        "message": "Lade...",
+        "description": "Displayed on the popup page while loading the raw email."
+    },
+    "popupNotConfigured": {
+        "message": "Dies ist dein \"Suspicious Email Submitter\", aber er ist noch nicht konfiguriert.",
+        "description": "Displayed in popup if extension isn't configured."
+    },
+    "optionsConfigurationInstructions": {
+        "message": "Um SES zu konfigurieren, bewege eine Konfigurationsdatei per drag-and-drop auf diesen Tab, oder wähle eine Datei.",
+        "description": "How to configure the extension."
+    },
+    "optionsAdvancedExport": {
+        "message": "Exportieren",
+        "description": "Label for export button."
+    },
+    "popupNoEmailDeteceted": {
+        "message": "Klicke diesen Knopf, wenn du eine verdächtige Email siehst.",
+        "description": "Displayed when current tab is not an email."
+    },
+    "optionsAdvancedName": {
+        "message": "Name",
+        "description": "Label for name field."
+    },
+    "followupOption": {
+        "message": "Bitte setz dich mit mir per Email in Verbindung",
+        "description": "Option to receive email from the researcher"
+    }
+}

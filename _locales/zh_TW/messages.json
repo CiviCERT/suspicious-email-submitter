@@ -1,0 +1,90 @@
+{
+    "popupDownloadFailed": {
+        "message": "無法下載郵件，請檢查網路連線是否正常。",
+        "description": "Displayed when the email download failed to connect."
+    },
+    "popupEmailServerError": {
+        "message": "郵件伺服器出錯，請稍後再試。",
+        "description": "Displayed when the email server returned an error."
+    },
+    "optionsAdvancedServerUrl": {
+        "message": "伺服器 URL",
+        "description": "Label for server url field."
+    },
+    "popupCurrent": {
+        "message": "SES 目前設定將郵件送至：",
+        "description": "Displayed on the popup page above the organization name/logo."
+    },
+    "optionsAdvancedAuthToken": {
+        "message": "授權代碼",
+        "description": "Label for auth token field."
+    },
+    "optionsCurrent": {
+        "message": "SES 目前設定將郵件送至：",
+        "description": "Displayed on the options page"
+    },
+    "popupMispServerError": {
+        "message": "MISP 伺候器出錯！",
+        "description": "Displayed when we get an error code from the MISP server."
+    },
+    "popupSettings": {
+        "message": "設定",
+        "description": "Label for a button on the popup page to open the settings page."
+    },
+    "popupHeader": {
+        "message": "這封郵件有點可疑嗎？\n",
+        "description": "Header for the popup page."
+    },
+    "optionsAdvancedSave": {
+        "message": "儲存",
+        "description": "Label for save button."
+    },
+    "optionsAdvanced": {
+        "message": "進階",
+        "description": "Label for button to show advanced settings."
+    },
+    "optionsAdvancedLogo": {
+        "message": "商標",
+        "description": "Label for logo field."
+    },
+    "popupSend": {
+        "message": "傳送",
+        "description": "Header for the popup page."
+    },
+    "optionsTitle": {
+        "message": "SES 設置",
+        "description": "Page/tab title for the options page"
+    },
+    "popupSent": {
+        "message": "已送出，謝謝！",
+        "description": "Header for the popup page."
+    },
+    "popupLoading": {
+        "message": "載入中...",
+        "description": "Displayed on the popup page while loading the raw email."
+    },
+    "popupNotConfigured": {
+        "message": "這是您的可疑郵件傳送器，但它尚未完成設置。",
+        "description": "Displayed in popup if extension isn't configured."
+    },
+    "optionsConfigurationInstructions": {
+        "message": "欲設置 SES，請將設置檔案拖曳到本分頁下，或是選取檔案。",
+        "description": "How to configure the extension."
+    },
+    "optionsAdvancedExport": {
+        "message": "滙出",
+        "description": "Label for export button."
+    },
+    "popupNoEmailDeteceted": {
+        "message": "若發現可疑郵件請此按鈕。",
+        "description": "Displayed when current tab is not an email."
+    },
+    "optionsAdvancedName": {
+        "message": "名稱",
+        "description": "Label for name field."
+    },
+    "followupOption": {
+        "message": "透過電子郵件了解後續狀況。",
+        "description": "Option to receive email from the researcher"
+    }
+}
