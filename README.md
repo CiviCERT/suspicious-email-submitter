@@ -2,6 +2,8 @@
 
 The Suspicious Email Submitter is a **discontinued** extension for common web browsers and email clients that enables the user to easily submit a suspicious email with all the information necessary to a pre-configured destination for further analysis, such as a [MISP instance](https://misp-project.org).
 
+This functionality has now been merged into [PhishDetect](https://phishdetect.io), whose development you can follow [here](https://github.com/phishdetect).
+
 This project is hosted by the [Computer Incident Response Center for Civil Society](https://civicert.org) (CiviCERT), representing the needs of the at-risk communities [Rapid Response Network](https://rarenet.org) member organizations serve. The extension will be built to be easily configurable for use by other organizations and communities both within and beyond these communities.
 
 # Current Development Status
@@ -18,8 +20,6 @@ Outlook desktop client | all email providers | [not started](https://github.com/
 Please see the [wiki](https://github.com/CiviCERT/suspicious-email-submitter/wiki) for instructions on how to use the Suspicious Email Submitter, as a user or as a provider.
 
 The Suspicious Email Submitter [requires a configuration file](https://github.com/CiviCERT/suspicious-email-submitter/wiki/Configuration-Files) in order to function.
-
-If you work with at-risk groups who would benefit from this tool and would like to participate in the private testing phase, please contact Michael Carbone <michael@accessnow.org> (OpenPGP fingerprint: D3D8 BEBF ECE8 91AC 46A7 30DE 63FC 4D26 84A7 33B4).
 
 # How to contribute
 
