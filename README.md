@@ -2,7 +2,7 @@
 
 The Suspicious Email Submitter is a **discontinued** extension for common web browsers and email clients that enables the user to easily submit a suspicious email with all the information necessary to a pre-configured destination for further analysis, such as a [MISP instance](https://misp-project.org).
 
-This functionality has now been merged into [PhishDetect](https://phishdetect.io), whose development you can follow [here](https://github.com/phishdetect).
+This functionality has now been merged into PhishDetect, whose development you can follow [here](https://github.com/phishdetect).
 
 This project is hosted by the [Computer Incident Response Center for Civil Society](https://civicert.org) (CiviCERT), representing the needs of the at-risk communities [Rapid Response Network](https://rarenet.org) member organizations serve. The extension will be built to be easily configurable for use by other organizations and communities both within and beyond these communities.
 
